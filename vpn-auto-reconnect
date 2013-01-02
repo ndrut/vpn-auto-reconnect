@@ -6,7 +6,7 @@
 #	UUID for your connection.
 #
 ##################################################
-CON_UUID='ec85e76c-5f9e-46ec-ba7b-44c407d4e1b0'
+CON_UUID='YOURUUIDHERE'
 VPNCON=$(nmcli con status uuid $CON_UUID | grep  "GENERAL.STATE:" | cut  -d":" -f2 | tr -d ' ')
 if [[ $VPNCON != 'activated' ]]; then
 	echo "Disconnected, trying to reconnect..."
